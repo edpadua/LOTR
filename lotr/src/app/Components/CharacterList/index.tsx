@@ -6,6 +6,13 @@ import axios from "axios";
 
 import { Character } from "../../@types/types"
 
+import CharacterCard from "../CharacterCard/index"
+
+import tw from "tailwind-styled-components"
+
+const List = tw.div`
+grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full container gap-2 mt-12 
+`;
 
 function CharacterList() {
 
@@ -28,17 +35,17 @@ function CharacterList() {
 
     useEffect(() => {
         getCharacters()
-      },[])
+    }, [])
 
     return (
-        <div>
+        <List>
             {characters ? characters.map((character: Character, index) => (
-                <p key={index}>{character.name}</p>
+                <CharacterCard key={index} {...character} />
 
             )) : (
                 <p>Não encontrados</p>
             )}
-        </div>
+        </List>
     )
 }
 

@@ -1,13 +1,21 @@
 'use client'
 
-import { useEffect} from 'react'
+import { useEffect } from 'react'
 
-import {Themes} from "./@types/types"
+import { Themes } from "./@types/types"
 
 import { useMainContext, useTheme } from '@/context/lotr.context'
 
 import Image from 'next/image'
+
 import CharacterList from './Components/CharacterList'
+
+
+import tw from "tailwind-styled-components"
+
+const Button = tw.button`
+    bg-yellow-600 text-white  dark:hover:bg-yellow-700  px-4 py-2 rounded-xl text-base
+`;
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -18,9 +26,9 @@ export default function Home() {
   }, [theme])
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <CharacterList/>
-      <button onClick={()=> setTheme(theme === 'light' ? 'dark' : 'light')}>Change Theme</button>
-    </main>
+    <>
+      <Button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Change Theme</Button>
+      <CharacterList />
+    </>
   )
 }

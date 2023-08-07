@@ -2,6 +2,10 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import localFont from 'next/font/local'
+
+const myFont = localFont({ src: "../../public/fonts/anirb___.woff" })
+
 import { MainContextProvider } from '@/context/lotr.context'
 
 import Navbar from "./Components/Navbar/index"
@@ -17,7 +21,7 @@ const Container = tw.div`
 
 
 const Content = tw.div`
-    bg-slate-100
+    bg-slate-200
     dark:bg-slate-700
 `;
 
@@ -35,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={myFont.className}>
         <MainContextProvider>
           <Navbar />
           <Content>
