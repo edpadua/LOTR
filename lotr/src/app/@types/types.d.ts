@@ -15,3 +15,10 @@ export type Character={
     birth: string;
     death: string;
 };
+
+
+export type ApiContextType={
+  characterList: Character[];
+  setCharacterList(characterList: Character[]):void;
+  getCharacterList():void;
+};

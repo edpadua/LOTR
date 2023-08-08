@@ -8,6 +8,8 @@ const myFont = localFont({ src: "../../public/fonts/anirb___.woff" })
 
 import { MainContextProvider } from '@/context/lotr.context'
 
+import { ApiContextProvider } from '@/context/api.context'
+
 import Navbar from "./Components/Navbar/index"
 import Footer from "./Components/Footer/index"
 
@@ -41,13 +43,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={myFont.className}>
         <MainContextProvider>
-          <Navbar />
-          <Content>
-            <Container>
-              {children}
-            </Container>
-          </Content>
-          <Footer />
+          <ApiContextProvider>
+            <Navbar />
+            <Content>
+              <Container>
+                {children}
+              </Container>
+            </Content>
+            <Footer />
+          </ApiContextProvider>
         </MainContextProvider>
       </body>
     </html>

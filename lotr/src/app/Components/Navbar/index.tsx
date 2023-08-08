@@ -3,6 +3,7 @@ import React from 'react'
 import tw from "tailwind-styled-components"
 
 import { AiFillFlag } from "react-icons/ai"
+import Search from '../Search';
 
 const Nav = tw.nav`
     dark:bg-slate-800
@@ -27,6 +28,7 @@ function Navbar() {
         <Nav>
             <NavContainer >
                 <AiFillFlag style={{ fontSize: '40px' }} />
+                <Search/>
             </NavContainer>
         </Nav>
     )
