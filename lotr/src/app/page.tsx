@@ -11,11 +11,9 @@ import Image from 'next/image'
 import CharacterList from './Components/CharacterList'
 
 
-import tw from "tailwind-styled-components"
+import { Button } from '@/GlobalStyles'
 
-const Button = tw.button`
-    bg-yellow-600 text-white  dark:hover:bg-yellow-700  px-4 py-2 rounded-xl text-base
-`;
+
 
 export default function Home() {
   const { theme, setTheme } = useTheme();

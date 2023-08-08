@@ -21,4 +21,6 @@ export type ApiContextType={
   characterList: Character[];
   setCharacterList(characterList: Character[]):void;
   getCharacterList():void;
+  search: string;
+  setSearch(search:string):void;
 };

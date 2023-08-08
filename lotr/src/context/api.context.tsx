@@ -15,9 +15,10 @@ export const ApiContextProvider = ({
     children: React.ReactNode;
 }) => {
     const [characterList, setCharacterList] = useState<Character[]>([]);
+    const [search, setSearch]=useState("");
 
     const getCharacterList = async () => {
-        const url = "https://the-one-api.dev/v2/character";
+        const url = `https://the-one-api.dev/v2/character?name=${search}`;
         axios.get(url, {
             headers: {
                 'Authorization': `Bearer OLO_ZclC5CI6uWfHBuua`
@@ -37,7 +38,7 @@ export const ApiContextProvider = ({
     }, [])
 
     return (
-        <ApiContext.Provider value={{ characterList, setCharacterList, getCharacterList }}>
+        <ApiContext.Provider value={{ characterList, setCharacterList, getCharacterList, search, setSearch }}>
             {children}
         </ApiContext.Provider>
 
