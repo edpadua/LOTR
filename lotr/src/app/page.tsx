@@ -2,14 +2,9 @@
 
 import { useEffect } from 'react'
 
-import { Themes } from "./@types/types"
-
-import { useMainContext, useTheme } from '@/context/lotr.context'
-
-import Image from 'next/image'
+import { useTheme } from '@/context/lotr.context'
 
 import CharacterList from './Components/CharacterList'
-
 
 import { ButtonOne } from '@/GlobalStyles'
 

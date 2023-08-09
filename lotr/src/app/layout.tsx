@@ -40,10 +40,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={myFont.className}>
-        <MainContextProvider>
-          <ApiContextProvider>
+    <MainContextProvider>
+      <ApiContextProvider>
+        <html lang="en">
+          <body className={myFont.className}>
+
             <Navbar />
             <Content>
               <Container>
@@ -51,9 +52,10 @@ export default function RootLayout({
               </Container>
             </Content>
             <Footer />
-          </ApiContextProvider>
-        </MainContextProvider>
-      </body>
-    </html>
+
+          </body>
+        </html>
+      </ApiContextProvider>
+    </MainContextProvider>
   )
 }

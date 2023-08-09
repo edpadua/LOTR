@@ -16,11 +16,11 @@ grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full container gap-2 mt-12
 
 function CharacterList() {
 
-    const {characterList} = useApi();
+    const {characterList,getCharacterList} = useApi();
 
     return (
         <List>
-            {
+            {   
                 characterList ? characterList.map((character: Character, index) => (
                 <CharacterCard key={index} {...character} />
 
