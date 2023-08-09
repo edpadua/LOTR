@@ -7,6 +7,10 @@ import { useApi } from '@/context/api.context'
 
 import tw from "tailwind-styled-components"
 
+const Button = tw.button`
+    bg-yellow-600 text-white  dark:hover:bg-yellow-700  px-4 py-2 rounded-xl text-base
+`;
+
 const SearchBar = tw.div`
 flex-auto w-64 text-xs
 `;
@@ -23,7 +27,7 @@ function Search() {
             <InputSearch onChange={e => setSearch(e.target.value)} value={search}
                 placeholder="Type the Character you are looking for ..."
             />
-            <ButtonOne onClick={getCharacterList}>Search</ButtonOne>
+            <Button onClick={getCharacterList}>Search</Button>
         </SearchBar>
     )
 }

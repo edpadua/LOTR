@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 import { useTheme } from '@/context/lotr.context'
 
-import CharacterList from './Components/CharacterList'
+//import CharacterList from './Components/CharacterList'
 
 import { ButtonOne } from '@/GlobalStyles'
 
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <ButtonOne onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Change Theme</ButtonOne>
-      <CharacterList />
+      {/**<CharacterList />**/}
     </>
   )
 }
