@@ -18,10 +18,11 @@ export const ApiContextProvider = ({
     const [search, setSearch]=useState("");
 
     const getCharacterList = async () => {
+        const key=process.env.NEXT_PUBLIC_API_KEY;
         const url = `https://the-one-api.dev/v2/character?name=${search}`;
         axios.get(url, {
             headers: {
-                'Authorization': `Bearer OLO_ZclC5CI6uWfHBuua`
+                'Authorization': `Bearer ${key}`
             }
         }).then(res => {
             setCharacterList(res.data.docs)

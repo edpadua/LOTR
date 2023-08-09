@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@/GlobalStyles';
+import { ButtonOne } from '@/GlobalStyles';
 import React from 'react'
 
 import { useApi } from '@/context/api.context'
@@ -12,7 +12,7 @@ flex-auto w-64 text-xs
 `;
 
 const InputSearch = tw.input`
-rounded-md border-none text-slate-800 outline-none h-8 lg:w-2/5 md:w-2/5 w-full px-2 mx-4 mt-1 
+rounded-md text-slate-800 dark:border-none border-2 border-solid  lg:w-2/5 md:w-2/5 w-2/3 px-2 h-8 ml-4 mr-2 pt-2 pb-1
 `;
 
 function Search() {
@@ -23,7 +23,7 @@ function Search() {
             <InputSearch onChange={e => setSearch(e.target.value)} value={search}
                 placeholder="Type the Character you are looking for ..."
             />
-            <Button onClick={getCharacterList}>Search</Button>
+            <ButtonOne onClick={getCharacterList}>Search</ButtonOne>
         </SearchBar>
     )
 }

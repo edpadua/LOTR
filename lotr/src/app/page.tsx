@@ -11,7 +11,7 @@ import Image from 'next/image'
 import CharacterList from './Components/CharacterList'
 
 
-import { Button } from '@/GlobalStyles'
+import { ButtonOne } from '@/GlobalStyles'
 
 
 
@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <Button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Change Theme</Button>
+      <ButtonOne onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>Change Theme</ButtonOne>
       <CharacterList />
     </>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 import tw from "tailwind-styled-components"
 
-import { AiFillFlag } from "react-icons/ai"
+import { LiaRingSolid } from "react-icons/lia"
 import Search from '../Search';
 
 const Nav = tw.nav`
@@ -27,7 +27,7 @@ function Navbar() {
     return (
         <Nav>
             <NavContainer >
-                <AiFillFlag style={{ fontSize: '40px' }} />
+                <LiaRingSolid style={{ fontSize: '40px' }} />
                 <Search/>
             </NavContainer>
         </Nav>
