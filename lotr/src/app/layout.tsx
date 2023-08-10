@@ -40,15 +40,31 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-   
-        <html lang="en">
-          <body className={myFont.className}>
 
-           
-                {children}
-             
-          </body>
-        </html>
- 
+    <html lang="en">
+      <body className={myFont.className}>
+
+
+        <MainContextProvider>
+          <ApiContextProvider>
+            <html lang="en">
+              <body className={myFont.className}>
+
+                <Navbar />
+                <Content>
+                  <Container>
+                    {children}
+                  </Container>
+                </Content>
+                <Footer />
+
+              </body>
+            </html>
+          </ApiContextProvider>
+        </MainContextProvider>
+
+      </body>
+    </html>
+
   )
 }
