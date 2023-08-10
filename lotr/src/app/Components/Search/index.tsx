@@ -16,7 +16,7 @@ flex-auto w-64 text-xs
 `;
 
 const InputSearch = tw.input`
-rounded-md text-slate-800 dark:border-none border-2 border-solid  lg:w-2/5 md:w-2/5 w-2/3 px-2 h-8 ml-4 mr-2 pt-2 pb-1
+rounded-md text-slate-800 dark:border-none border-2 border-solid  lg:w-2/5 md:w-2/5 w-2/4 px-2 h-8 ml-4 mr-2 pt-2 pb-1
 `;
 
 function Search() {
