@@ -1,6 +1,6 @@
 "use client";
 
-import {Themes, ThemeState} from "../app/@types/types"
+import {Themes, ThemeState} from "../app/typesdata/typesdata"
 
 import { createContext, useContext, useState } from "react";
 

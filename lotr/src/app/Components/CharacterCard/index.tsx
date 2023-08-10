@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Character } from '@/app/@types/types'
+import { Character } from '@/app/typesdata/typesdata'
 
 import tw from "tailwind-styled-components"
 

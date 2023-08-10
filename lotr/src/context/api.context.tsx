@@ -1,6 +1,6 @@
 "use client";
 
-import {Character,ApiContextType} from "../app/@types/types"
+import {Character,ApiContextType} from "../app/typesdata/typesdata"
 
 import { createContext, useContext, useState ,useEffect } from "react";
 

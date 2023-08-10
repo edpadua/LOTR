@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import { Character } from "../../@types/types"
+import { Character } from "../../typesdata/typesdata"
 
 import CharacterCard from "../CharacterCard/index"
 
