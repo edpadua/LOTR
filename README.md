@@ -17,7 +17,7 @@
 
 This project is a system developed with the ReactJS library that shows the list of characters from the books and movies of the fantasy series Lord of the Rings with data provided by the API "The One API". In addition to displaying the complete list of characters, in the navigation bar there is an entry field and button for the user to search for a specific character by name. In addition to this functionality, the application allows a theme change, where the layout colors are changed from the light version to the dark version.
 
-The main purpose of the project is the development of an application using the Next.js framework and within it state management with React's ContextAPI, both to make the Rest API consumption function available to all components and to implement the change of state. theme. Among the other technologies used are TypeScript, Tailwind CSS with Tailwind Styled-Components, the Axios library to consume the Rest API.
+The main purpose of the project is the development of an application using the Next.js framework and within it, state management with React's ContextAPI, both to make the Rest API consumption function available to all components and to implement the change of state. theme. Among the other technologies used are TypeScript, Tailwind CSS with Tailwind Styled-Components, the Axios library to consume the Rest API.
 
 ### Screeshot - Desktop
 
